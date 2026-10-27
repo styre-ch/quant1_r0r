@@ -3,10 +3,8 @@ from pathlib import Path
 import pandas as pd
 
 
-# 读取已经下载的文件，不重新联网下载
-project_dir = Path(__file__).resolve().parent
+project_dir = Path(__file__).resolve().parent.parent
 file_path = project_dir / "data" / "raw" / "000001_2024_unadjusted.csv"
-
 df = pd.read_csv(
     file_path,
     encoding="utf-8-sig",
